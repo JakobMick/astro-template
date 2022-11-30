@@ -1,0 +1,25 @@
+module.exports = {
+	useTabs: true,
+	tabWidth: 1,
+	bracketSameLine: true,
+	singleAttributePerLine: true,
+	plugins: [
+		require.resolve("@trivago/prettier-plugin-sort-imports"),
+		require.resolve("prettier-plugin-astro"),
+		require("prettier-plugin-tailwindcss"),
+	],
+	tailwindConfig: "./config/tailwind.config.ts",
+	pluginSearchDirs: false,
+	importOrder: [
+		"^@modules/(.*)$",
+		"^@layouts/(.*)$",
+		"^@pages/(.*)$",
+		"^@components/(.*)$",
+		"^@assets/(.*)$",
+		"^@scripts/(.*)$",
+		"^@styles/(.*)$",
+		"^[./]",
+	],
+	importOrderSeparation: true,
+	importOrderSortSpecifiers: true,
+};
