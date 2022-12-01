@@ -1,5 +1,11 @@
 # [Astro](https://astro.build/) [Template](https://astro.build/themes/)
 
+## Get started
+
+```pnpm
+pnpm create astro -- --template JakobMick/astro-template
+```
+
 ## Includes
 
 ### Tooling
