@@ -15,6 +15,7 @@ pnpm create astro -- --template JakobMick/astro-template
   - [prettier-plugin-astro](https://github.com/withastro/prettier-plugin-astro)
   - [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)
   - [prettier-plugin-sort-imports](https://github.com/trivago/prettier-plugin-sort-imports)
+- [Unlighthouse](https://unlighthouse.dev/)
 
 ### Languages
 

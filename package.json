@@ -9,7 +9,8 @@
 		"preview": "astro preview --config config/astro.config.ts",
 		"build-preview": "astro build --config config/astro.config.ts && astro preview --config config/astro.config.ts",
 		"astro": "astro --config config/astro.config.ts",
-		"format": "prettier --write --plugin-search-dir=. ."
+		"format": "prettier --write --plugin-search-dir=. .",
+		"unligthhouse": "npx unlighthouse --site EXAMPLE.COM"
 	},
 	"devDependencies": {
 		"@astrojs/image": "^0.12.1",
