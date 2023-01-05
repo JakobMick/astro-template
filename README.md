@@ -2,8 +2,18 @@
 
 ## Get started
 
+1. Create a new project:
+
 ```pnpm
 pnpm create astro -- --template JakobMick/astro-template
+```
+
+2. Update config in [package.json](./package.json):
+
+```json
+"config": {
+  "url": "https://www.replace-this.example"
+},
 ```
 
 ## Includes

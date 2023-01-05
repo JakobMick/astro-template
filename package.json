@@ -1,5 +1,8 @@
 {
 	"name": "@jakobmick/astro-template",
+	"config": {
+		"url": "https://www.replace-this.example"
+	},
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
@@ -10,7 +13,9 @@
 		"build-preview": "astro build --config config/astro.config.ts && astro preview --config config/astro.config.ts",
 		"astro": "astro --config config/astro.config.ts",
 		"format": "prettier --write --plugin-search-dir=. .",
-		"unligthhouse": "npx unlighthouse --site EXAMPLE.COM"
+		"unligthhouse": "pnpm run unligthhouse-windows",
+		"unligthhouse-windows": "npx unlighthouse --site %npm_package_config_url%",
+		"unligthhouse-linux": "npx unlighthouse --site ${npm_package_version}"
 	},
 	"devDependencies": {
 		"@astrojs/image": "^0.12.1",
