@@ -18,11 +18,11 @@
 		"unligthhouse-linux": "npx unlighthouse --site ${npm_package_version}"
 	},
 	"devDependencies": {
-		"@astrojs/image": "^0.12.1",
+		"@astrojs/image": "^0.13.0",
 		"@astrojs/sitemap": "^1.0.0",
-		"@astrojs/tailwind": "^2.1.3",
+		"@astrojs/tailwind": "^3.0.0",
 		"@trivago/prettier-plugin-sort-imports": "^4.0.0",
-		"astro": "^1.9.2",
+		"astro": "^2.0.0",
 		"prettier": "2.8.3",
 		"prettier-plugin-astro": "^0.7.2",
 		"prettier-plugin-tailwindcss": "^0.2.1",
