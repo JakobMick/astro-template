@@ -3,35 +3,35 @@
         Options -MultiViews
     </IfModule>
 
-    # Use HSTS
+    # Use HSTS (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security)
     RewriteCond %{HTTPS} off
     RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
     Header set Strict-Transport-Security: "max-age=31536000; includeSubDomains; preload"
 
-    # Set Content-Security-Policy
+    # Set Content-Security-Policy (https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)
     Header add Content-Security-Policy "default-src 'none'; img-src 'self'; font-src 'none'; script-src 'none'; script-src-elem 'none'; style-src 'none'; style-src-elem 'self'; base-uri 'none'; manifest-src 'none'; form-action 'none'; frame-ancestors 'none'; require-trusted-types-for 'script';"
 
-    # Set Referrer-Policy
+    # Set Referrer-Policy (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy)
     Header always set Referrer-Policy: same-origin
 
-    # Set Permissions-Policy
+    # Set Permissions-Policy (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy)
     Header always set Permissions-Policy "geolocation=(),midi=(),sync-xhr=(),microphone=(),camera=(),magnetometer=(),gyroscope=(),fullscreen=(),payment=()"
 
-    # Set X-Content-Type-Options
+    # Set X-Content-Type-Options (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options)
     Header always set X-Content-Type-Options "nosniff"
     
-    # Set X-Frame-Options
+    # Set X-Frame-Options (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
     Header always set X-Frame-Options "SAMEORIGIN"
 
-    # Set X-XSS-Protection
+    # Set X-XSS-Protection (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection)
     header always set X-XSS-Protection "1; mode=block"
     
-    # Set Cache-Control for static assets
+    # Set Cache-Control for static assets (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)
     <FilesMatch "\.(gif|ico|jpeg|jpg|JPG|png|webp|avif|tif|tiff|bmp|svg|css|js|woff|woff2|mp3|mp4)$">
         Header set Cache-Control "max-age=31536000, public"
     </FilesMatch>
 
-    # Set ErrorDocuments
+    # Set ErrorDocuments (https://developer.mozilla.org/en-US/docs/Learn/Server-side/Apache_Configuration_htaccess#custom_error_pagesmessages)
     ErrorDocument 404 /404.html
     ErrorDocument 500 /500.html
 </IfModule>
