@@ -24,7 +24,7 @@
     Header always set X-Frame-Options "SAMEORIGIN"
 
     # Set X-XSS-Protection (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection)
-    header always set X-XSS-Protection "1; mode=block"
+    Header always set X-XSS-Protection "1; mode=block"
     
     # Set Cache-Control for static assets (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)
     <FilesMatch "\.(gif|ico|jpeg|jpg|JPG|png|webp|avif|tif|tiff|bmp|svg|css|js|woff|woff2|mp3|mp4)$">
