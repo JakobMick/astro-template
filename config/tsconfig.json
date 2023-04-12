@@ -19,6 +19,7 @@
 		"baseUrl": "../.",
 		"paths": {
 			"@modules/*": ["node_modules/*"],
+			"@a11y/*": ["src/a11y/*"],
 			"@assets/*": ["src/assets/*"],
 			"@components/*": ["src/components/*"],
 			"@i18n/*": ["src/i18n/*"],
