@@ -83,9 +83,8 @@ function useSwitchRoute(lang: keyof typeof languages) {
 
 		const languageKeys = Object.keys(languages) as Array<keyof typeof languages>;
 		const nextIndex = languageKeys.indexOf(lang) + 1;
-		const nextLanguage = languageKeys[
-			nextIndex >= languageKeys.length ? 0 : nextIndex
-		];
+		const nextLanguage =
+			languageKeys[nextIndex >= languageKeys.length ? 0 : nextIndex];
 
 		return {
 			switchedRoute: languages[nextLanguage].routes[route],
