@@ -1,27 +1,27 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@astrojs/image': ^0.16.5
+  '@astrojs/image': ^0.16.6
   '@astrojs/sitemap': ^1.2.2
   '@astrojs/tailwind': ^3.1.1
   '@trivago/prettier-plugin-sort-imports': ^4.1.1
-  astro: ^2.2.1
+  astro: ^2.3.0
   prettier: 2.8.7
   prettier-plugin-astro: ^0.8.0
   prettier-plugin-tailwindcss: ^0.2.7
-  sass: ^1.61.0
+  sass: ^1.62.0
   tailwindcss: ^3.3.1
 
 devDependencies:
-  '@astrojs/image': 0.16.5_astro@2.2.1
+  '@astrojs/image': 0.16.6_astro@2.3.0
   '@astrojs/sitemap': 1.2.2
-  '@astrojs/tailwind': 3.1.1_6525wktvnrshh7tftflomd327i
+  '@astrojs/tailwind': 3.1.1_zwpyd63tzib74yordqn4to2xfu
   '@trivago/prettier-plugin-sort-imports': 4.1.1_prettier@2.8.7
-  astro: 2.2.1_sass@1.61.0
+  astro: 2.3.0_sass@1.62.0
   prettier: 2.8.7
   prettier-plugin-astro: 0.8.0
   prettier-plugin-tailwindcss: 0.2.7_dmkz4odac2rlwl5642przab57e
-  sass: 1.61.0
+  sass: 1.62.0
   tailwindcss: 3.3.1
 
 packages:
@@ -46,17 +46,17 @@ packages:
     resolution: {integrity: sha512-xV/3r+Hrfpr4ECfJjRjeaMkJvU73KiOADowHjhkqidfNPVAWPzbqw1KePXuMK1TjzMvoAVE7E163oqfH3lDwSw==}
     dev: true
 
-  /@astrojs/image/0.16.5_astro@2.2.1:
-    resolution: {integrity: sha512-pps2fXTcPqUJOaATgrXT2eQwYJeW2fmd+QuQLqBiiIQHaECNugHCt/MwBi9skn+195VcFtYM3eCTjvmRrx4fPQ==}
+  /@astrojs/image/0.16.6_astro@2.3.0:
+    resolution: {integrity: sha512-/MJ0aByhuNAT7VeMwXVjS0e5IH8MxsYeEnymOJ0/1VBmZFmcbtb1nUeLE0uO3EV3kNYGRJtwGyald8YJ9ncW4A==}
     peerDependencies:
-      astro: ^2.2.0
+      astro: ^2.2.2
       sharp: '>=0.31.0'
     peerDependenciesMeta:
       sharp:
         optional: true
     dependencies:
       '@altano/tiny-async-pool': 1.0.2
-      astro: 2.2.1_sass@1.61.0
+      astro: 2.3.0_sass@1.62.0
       http-cache-semantics: 4.1.1
       image-size: 1.0.2
       kleur: 4.1.5
@@ -82,13 +82,13 @@ packages:
       vscode-uri: 3.0.7
     dev: true
 
-  /@astrojs/markdown-remark/2.1.3_astro@2.2.1:
-    resolution: {integrity: sha512-Di8Qbit9p7L7eqKklAJmiW9nVD+XMsNHpaNzCLduWjOonDu9fVgEzdjeDrTVCDtgrvkfhpAekuNXrp5+w4F91g==}
+  /@astrojs/markdown-remark/2.1.4_astro@2.3.0:
+    resolution: {integrity: sha512-z5diCcFo2xkBAJ11KySAIKpZZkULZmzUvWsZ2VWIOrR6QrEgEfVl5jTpgPSedx4m+xUPuemlUviOotGB7ItNsQ==}
     peerDependencies:
-      astro: ^2.2.0
+      astro: ^2.3.0
     dependencies:
       '@astrojs/prism': 2.1.1
-      astro: 2.2.1_sass@1.61.0
+      astro: 2.3.0_sass@1.62.0
       github-slugger: 1.5.0
       import-meta-resolve: 2.2.2
       rehype-raw: 6.1.1
@@ -119,14 +119,14 @@ packages:
       zod: 3.21.4
     dev: true
 
-  /@astrojs/tailwind/3.1.1_6525wktvnrshh7tftflomd327i:
+  /@astrojs/tailwind/3.1.1_zwpyd63tzib74yordqn4to2xfu:
     resolution: {integrity: sha512-Wx/ZtVnmtfqHWGVzvUEYZm8rufVKVgDIef0q6fzwUxoT1EpTTwBkTbpnzooogewMLOh2eTscasGe3Ih2HC1wVA==}
     peerDependencies:
       astro: ^2.1.3
       tailwindcss: ^3.0.24
     dependencies:
       '@proload/core': 0.3.3
-      astro: 2.2.1_sass@1.61.0
+      astro: 2.3.0_sass@1.62.0
       autoprefixer: 10.4.14_postcss@8.4.21
       postcss: 8.4.21
       postcss-load-config: 4.0.1_postcss@8.4.21
@@ -907,8 +907,8 @@ packages:
     resolution: {integrity: sha512-I1jXZMjAgCMmxT4qxXfPXa6SthSoE8h6gkSI9BGGNv8mP8G/v0blc+qFnZu6K42vTOiuME596QaLO0TP3Lk0xg==}
     dev: true
 
-  /astro/2.2.1_sass@1.61.0:
-    resolution: {integrity: sha512-yYPRzh3su38bi3VBCKmYAUBkQSaFQMKFsu8JAVDzFRoGLbskJ/6JkDX2abSB9/iRug8GAKaH/FWxXOTzIsSQ7Q==}
+  /astro/2.3.0_sass@1.62.0:
+    resolution: {integrity: sha512-1t8U6vDHQLT0gw0IXZLtJKDIShCcJwOuh0K1JyPgFwu1famb/ggyvsqp9nxBZIbNV8BcAWDHrJA+Z7hh1oEiWA==}
     engines: {node: '>=16.12.0', npm: '>=6.14.0'}
     hasBin: true
     peerDependencies:
@@ -919,7 +919,7 @@ packages:
     dependencies:
       '@astrojs/compiler': 1.3.1
       '@astrojs/language-server': 0.28.3
-      '@astrojs/markdown-remark': 2.1.3_astro@2.2.1
+      '@astrojs/markdown-remark': 2.1.4_astro@2.3.0
       '@astrojs/telemetry': 2.1.0
       '@astrojs/webapi': 2.1.0
       '@babel/core': 7.21.4
@@ -966,7 +966,7 @@ packages:
       typescript: 5.0.4
       unist-util-visit: 4.1.2
       vfile: 5.3.7
-      vite: 4.2.1_sass@1.61.0
+      vite: 4.2.1_sass@1.62.0
       vitefu: 0.2.4_vite@4.2.1
       yargs-parser: 21.1.1
       zod: 3.21.4
@@ -988,7 +988,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.21.5
-      caniuse-lite: 1.0.30001477
+      caniuse-lite: 1.0.30001478
       fraction.js: 4.2.0
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -1054,8 +1054,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001477
-      electron-to-chromium: 1.4.357
+      caniuse-lite: 1.0.30001478
+      electron-to-chromium: 1.4.365
       node-releases: 2.0.10
       update-browserslist-db: 1.0.10_browserslist@4.21.5
     dev: true
@@ -1084,8 +1084,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /caniuse-lite/1.0.30001477:
-    resolution: {integrity: sha512-lZim4iUHhGcy5p+Ri/G7m84hJwncj+Kz7S5aD4hoQfslKZJgt0tHc/hafVbqHC5bbhHb+mrW2JOUHkI5KH7toQ==}
+  /caniuse-lite/1.0.30001478:
+    resolution: {integrity: sha512-gMhDyXGItTHipJj2ApIvR+iVB5hd0KP3svMWWXDvZOmjzJJassGLMfxRkQCSYgGd2gtdL/ReeiyvMSFD1Ss6Mw==}
     dev: true
 
   /ccount/2.0.1:
@@ -1300,8 +1300,8 @@ packages:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
     dev: true
 
-  /electron-to-chromium/1.4.357:
-    resolution: {integrity: sha512-UTkCbNTAcGXABmEnQrGcW4m3cG6fcyBfD4KDF0iyEAlbrGZiY9dmslyDAGOD1Kr5biN2F743Y30aRCOtau35Vw==}
+  /electron-to-chromium/1.4.365:
+    resolution: {integrity: sha512-FRHZO+1tUNO4TOPXmlxetkoaIY8uwHzd1kKopK/Gx2SKn1L47wJXWD44wxP5CGRyyP98z/c8e1eBzJrgPeiBOg==}
     dev: true
 
   /emmet/2.4.2:
@@ -2547,7 +2547,7 @@ packages:
       postcss: 8.4.21
       postcss-value-parser: 4.2.0
       read-cache: 1.0.0
-      resolve: 1.22.2
+      resolve: 1.22.3
     dev: true
 
   /postcss-js/4.0.1_postcss@8.4.21:
@@ -2845,8 +2845,8 @@ packages:
       unist-util-visit: 4.1.2
     dev: true
 
-  /resolve/1.22.2:
-    resolution: {integrity: sha512-Sb+mjNHOULsBv818T40qSPeRiuWLyaGMa5ewydRLFimneixmVy2zdivRl+AF6jaYPC8ERxGDmFSiqui6SfPd+g==}
+  /resolve/1.22.3:
+    resolution: {integrity: sha512-P8ur/gp/AmbEzjr729bZnLjXK5Z+4P0zhIJgBgzqRih7hL7BOukHGtSTA3ACMY467GRFz3duQsi0bDZdR7DKdw==}
     hasBin: true
     dependencies:
       is-core-module: 2.12.0
@@ -2937,8 +2937,8 @@ packages:
       suf-log: 2.5.3
     dev: true
 
-  /sass/1.61.0:
-    resolution: {integrity: sha512-PDsN7BrVkNZK2+dj/dpKQAWZavbAQ87IXqVvw2+oEYI+GwlTWkvbQtL7F2cCNbMqJEYKPh1EcjSxsnqIb/kyaQ==}
+  /sass/1.62.0:
+    resolution: {integrity: sha512-Q4USplo4pLYgCi+XlipZCWUQz5pkg/ruSSgJ0WRDSb/+3z9tXUOkQ7QPYn4XrhZKYAK4HlpaQecRwKLJX6+DBg==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
@@ -3200,7 +3200,7 @@ packages:
       postcss-selector-parser: 6.0.11
       postcss-value-parser: 4.2.0
       quick-lru: 5.1.1
-      resolve: 1.22.2
+      resolve: 1.22.3
       sucrase: 3.32.0
     transitivePeerDependencies:
       - ts-node
@@ -3256,7 +3256,7 @@ packages:
       '@types/json5': 0.0.30
       '@types/resolve': 1.20.2
       json5: 2.2.3
-      resolve: 1.22.2
+      resolve: 1.22.3
       strip-bom: 4.0.0
       type-fest: 0.13.1
     dev: true
@@ -3410,7 +3410,7 @@ packages:
       vfile-message: 3.1.4
     dev: true
 
-  /vite/4.2.1_sass@1.61.0:
+  /vite/4.2.1_sass@1.62.0:
     resolution: {integrity: sha512-7MKhqdy0ISo4wnvwtqZkjke6XN4taqQ2TBaTccLIpOKv7Vp2h4Y+NpmWCnGDeSvvn45KxvWgGyb0MkHvY1vgbg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -3437,9 +3437,9 @@ packages:
     dependencies:
       esbuild: 0.17.16
       postcss: 8.4.21
-      resolve: 1.22.2
+      resolve: 1.22.3
       rollup: 3.20.2
-      sass: 1.61.0
+      sass: 1.62.0
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
@@ -3452,7 +3452,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 4.2.1_sass@1.61.0
+      vite: 4.2.1_sass@1.62.0
     dev: true
 
   /vscode-css-languageservice/6.2.4:

@@ -19,15 +19,15 @@
 	},
 	"prettier": "./config/prettier.config.ts",
 	"devDependencies": {
-		"@astrojs/image": "^0.16.5",
+		"@astrojs/image": "^0.16.6",
 		"@astrojs/sitemap": "^1.2.2",
 		"@astrojs/tailwind": "^3.1.1",
 		"@trivago/prettier-plugin-sort-imports": "^4.1.1",
-		"astro": "^2.2.1",
+		"astro": "^2.3.0",
 		"prettier": "2.8.7",
 		"prettier-plugin-astro": "^0.8.0",
 		"prettier-plugin-tailwindcss": "^0.2.7",
-		"sass": "^1.61.0",
+		"sass": "^1.62.0",
 		"tailwindcss": "^3.3.1"
 	}
 }
