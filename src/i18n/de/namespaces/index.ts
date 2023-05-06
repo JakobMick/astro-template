@@ -4,7 +4,6 @@ const germanNamespaces = {
 	namespace,
 } as const;
 
-type GermanNamespaces =
-	| keyof typeof namespace;
+type GermanNamespaces = keyof typeof namespace;
 
 export { germanNamespaces, type GermanNamespaces };
