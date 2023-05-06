@@ -1,4 +1,4 @@
-import { defaultLanguage, languages } from "@i18n/config";
+import { defaultLanguage, languages, namespaces } from "@i18n/config";
 import type { I18n } from "@i18n/types";
 
 function useTranslations(lang: keyof typeof languages) {
@@ -10,6 +10,32 @@ function useTranslations(lang: keyof typeof languages) {
 	 */
 	return function t(key: I18n.Translations) {
 		return languages[lang].translations[key];
+	};
+}
+
+function useNamespaces(
+	lang: keyof typeof languages,
+	namespace?: I18n.Namespaces
+) {
+	/**
+	 * Get the translated string from the specified key from the specified namespace.
+	 *
+	 * @param key
+	 * @returns The translated string
+	 */
+	return function n(
+		key: I18n.NamespaceTranslations,
+		useNamespace?: I18n.Namespaces
+	) {
+		if (useNamespace !== undefined) {
+			const ns = namespaces[lang][useNamespace];
+			return ns[key as keyof typeof ns];
+		} else if (namespace !== undefined) {
+			const ns = namespaces[lang][namespace];
+			return ns[key as keyof typeof ns];
+		}
+
+		throw Error("You must specify a namespace to use the n function.");
 	};
 }
 
@@ -115,11 +141,12 @@ function getLangFromUrl(url: URL) {
  * @param url
  * @returns The i18n functions
  */
-export function useI18n(url: URL) {
+export function useI18n(url: URL, namespace?: I18n.Namespaces) {
 	const lang = getLangFromUrl(url);
 
 	return {
 		t: useTranslations(lang),
+		n: useNamespaces(lang, namespace),
 		links: useLinks(lang),
 		routes: useRoutes(lang),
 		titles: useTitles(lang),

@@ -4,7 +4,7 @@ import routes from "./routes";
 import titles from "./titles";
 import translations from "./translations";
 
-export const english = {
+export default {
 	descriptions,
 	links,
 	routes,
