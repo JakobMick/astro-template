@@ -1,7 +1,7 @@
 import type german from "@i18n/de";
-import type { GermanNamespaces, germanNamespaces } from "@i18n/de/namespaces";
+import type germanNamespaces from "@i18n/de/namespaces";
 import type english from "@i18n/en";
-import type { EnglishNamespaces, englishNamespaces } from "@i18n/en/namespaces";
+import type englishNamespaces from "@i18n/en/namespaces";
 
 export namespace I18n {
 	export type Namespaces =
@@ -16,5 +16,10 @@ export namespace I18n {
 	export type Translations =
 		| keyof typeof german.translations
 		| keyof typeof english.translations;
-	export type NamespaceTranslations = GermanNamespaces | EnglishNamespaces;
 }
+
+export type DeepestKeys<T> = T extends string
+	? never
+	: {
+			[K in keyof T & string]: T[K] extends string ? K : DeepestKeys<T[K]>;
+	  }[keyof T & string];

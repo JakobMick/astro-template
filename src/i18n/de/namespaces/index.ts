@@ -1,9 +1,5 @@
 import namespace from "./namespace";
 
-const germanNamespaces = {
+export default {
 	namespace,
 } as const;
-
-type GermanNamespaces = keyof typeof namespace;
-
-export { germanNamespaces, type GermanNamespaces };

@@ -1,7 +1,7 @@
 import german from "@i18n/de";
-import { germanNamespaces } from "@i18n/de/namespaces";
+import germanNamespaces from "@i18n/de/namespaces";
 import english from "@i18n/en";
-import { englishNamespaces } from "@i18n/en/namespaces";
+import englishNamespaces from "@i18n/en/namespaces";
 
 export const defaultLanguage: keyof typeof languages = "de";
 

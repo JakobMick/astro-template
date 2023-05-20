@@ -1,5 +1,5 @@
 import { defaultLanguage, languages, namespaces } from "@i18n/config";
-import type { I18n } from "@i18n/types";
+import type { DeepestKeys, I18n } from "@i18n/types";
 
 function useTranslations(lang: keyof typeof languages) {
 	/**
@@ -13,26 +13,28 @@ function useTranslations(lang: keyof typeof languages) {
 	};
 }
 
-function useNamespaces(
-	lang: keyof typeof languages,
-	namespace?: I18n.Namespaces
-) {
+function useNamespaces<
+	Lang extends keyof typeof languages,
+	Namespace extends keyof (typeof namespaces)[keyof typeof languages]
+>(lang: Lang, namespace?: Namespace) {
 	/**
 	 * Get the translated string from the specified key from the specified namespace.
 	 *
 	 * @param key
 	 * @returns The translated string
 	 */
-	return function n(
-		key: I18n.NamespaceTranslations,
-		useNamespace?: I18n.Namespaces
-	) {
+	return function n<
+		Namespace extends keyof (typeof namespaces)[keyof typeof languages],
+		Key extends DeepestKeys<(typeof namespaces)[typeof lang][Namespace]>
+	>(key: Key, useNamespace?: Namespace) {
 		if (useNamespace !== undefined) {
 			const ns = namespaces[lang][useNamespace];
-			return ns[key as keyof typeof ns];
+			const returnValue = ns[key as keyof typeof ns];
+			return returnValue;
 		} else if (namespace !== undefined) {
 			const ns = namespaces[lang][namespace];
-			return ns[key as keyof typeof ns];
+			const returnValue = ns[key as keyof typeof ns];
+			return returnValue;
 		}
 
 		throw Error("You must specify a namespace to use the n function.");
