@@ -1,7 +1,7 @@
-import { defaultLanguage, languages, namespaces } from "@i18n/config";
+import { defaultLanguage, translations, namespaces } from "@i18n/config";
 import type { DeepestKeys, I18n } from "@i18n/types";
 
-function useTranslations(lang: keyof typeof languages) {
+function useTranslations(lang: keyof typeof translations) {
 	/**
 	 * Get the translated string from the specified key.
 	 *
@@ -9,13 +9,13 @@ function useTranslations(lang: keyof typeof languages) {
 	 * @returns The translated string
 	 */
 	return function t(key: I18n.Translations) {
-		return languages[lang].translations[key];
+		return translations[lang].translations[key];
 	};
 }
 
 function useNamespaces<
-	Lang extends keyof typeof languages,
-	Namespace extends keyof (typeof namespaces)[keyof typeof languages]
+	Lang extends keyof typeof translations,
+	Namespace extends keyof (typeof namespaces)[keyof typeof translations]
 >(lang: Lang, namespace?: Namespace) {
 	/**
 	 * Get the translated string from the specified key from the specified namespace.
@@ -24,7 +24,7 @@ function useNamespaces<
 	 * @returns The translated string
 	 */
 	return function n<
-		Namespace extends keyof (typeof namespaces)[keyof typeof languages],
+		Namespace extends keyof (typeof namespaces)[keyof typeof translations],
 		Key extends DeepestKeys<(typeof namespaces)[typeof lang][Namespace]>
 	>(key: Key, useNamespace?: Namespace) {
 		if (useNamespace !== undefined) {
@@ -41,7 +41,7 @@ function useNamespaces<
 	};
 }
 
-function useLinks(lang: keyof typeof languages) {
+function useLinks(lang: keyof typeof translations) {
 	/**
 	 * Get the translated link from the specified key.
 	 *
@@ -49,11 +49,11 @@ function useLinks(lang: keyof typeof languages) {
 	 * @returns The translated link
 	 */
 	return function links(key: I18n.Links) {
-		return languages[lang].links[key];
+		return translations[lang].links[key];
 	};
 }
 
-function useRoutes(lang: keyof typeof languages) {
+function useRoutes(lang: keyof typeof translations) {
 	/**
 	 * Get the translated route from the specified key.
 	 *
@@ -61,11 +61,11 @@ function useRoutes(lang: keyof typeof languages) {
 	 * @returns The translated route
 	 */
 	return function routes(key: I18n.Routes) {
-		return languages[lang].routes[key];
+		return translations[lang].routes[key];
 	};
 }
 
-function useTitles(lang: keyof typeof languages) {
+function useTitles(lang: keyof typeof translations) {
 	/**
 	 * Get the translated title from the specified key.
 	 *
@@ -73,11 +73,11 @@ function useTitles(lang: keyof typeof languages) {
 	 * @returns The translated title
 	 */
 	return function titles(key: I18n.Titles) {
-		return languages[lang].titles[key];
+		return translations[lang].titles[key];
 	};
 }
 
-function useDescriptions(lang: keyof typeof languages) {
+function useDescriptions(lang: keyof typeof translations) {
 	/**
 	 * Get the translated description from the specified key.
 	 *
@@ -85,11 +85,11 @@ function useDescriptions(lang: keyof typeof languages) {
 	 * @returns The translated description
 	 */
 	return function descriptions(key: I18n.Descriptions) {
-		return languages[lang].descriptions[key];
+		return translations[lang].descriptions[key];
 	};
 }
 
-function useSwitchRoute(lang: keyof typeof languages) {
+function useSwitchRoute(lang: keyof typeof translations) {
 	/**
 	 * Switch the route to the next language or to the specified language.
 	 *
@@ -99,23 +99,23 @@ function useSwitchRoute(lang: keyof typeof languages) {
 	 */
 	return function switchRoute(
 		route?: I18n.Routes,
-		language?: keyof typeof languages
+		language?: keyof typeof translations
 	) {
 		if (route === undefined) {
 			route = "index";
 		}
 
 		if (language !== undefined) {
-			return { route: languages[language].routes[route], language: language };
+			return { route: translations[language].routes[route], language: language };
 		}
 
-		const languageKeys = Object.keys(languages) as Array<keyof typeof languages>;
+		const languageKeys = Object.keys(translations) as Array<keyof typeof translations>;
 		const nextIndex = languageKeys.indexOf(lang) + 1;
 		const nextLanguage =
 			languageKeys[nextIndex >= languageKeys.length ? 0 : nextIndex];
 
 		return {
-			switchedRoute: languages[nextLanguage].routes[route],
+			switchedRoute: translations[nextLanguage].routes[route],
 			switchedLanguage: nextLanguage,
 		};
 	};
@@ -131,7 +131,7 @@ function getLangFromUrl(url: URL) {
 	if (url.pathname != undefined) {
 		const [, lang] = url.pathname.split("/");
 
-		if (lang in languages) return lang as keyof typeof languages;
+		if (lang in translations) return lang as keyof typeof translations;
 	}
 
 	return defaultLanguage;
