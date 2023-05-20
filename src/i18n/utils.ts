@@ -1,4 +1,4 @@
-import { defaultLanguage, translations, namespaces } from "@i18n/config";
+import { defaultLanguage, namespaces, translations } from "@i18n/config";
 import type { DeepestKeys, I18n } from "@i18n/types";
 
 function useTranslations(lang: keyof typeof translations) {
@@ -109,7 +109,9 @@ function useSwitchRoute(lang: keyof typeof translations) {
 			return { route: translations[language].routes[route], language: language };
 		}
 
-		const languageKeys = Object.keys(translations) as Array<keyof typeof translations>;
+		const languageKeys = Object.keys(translations) as Array<
+			keyof typeof translations
+		>;
 		const nextIndex = languageKeys.indexOf(lang) + 1;
 		const nextLanguage =
 			languageKeys[nextIndex >= languageKeys.length ? 0 : nextIndex];

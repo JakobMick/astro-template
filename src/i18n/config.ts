@@ -3,7 +3,9 @@ import germanNamespaces from "@i18n/de/namespaces";
 import englishTranslations from "@i18n/en";
 import englishNamespaces from "@i18n/en/namespaces";
 
-export const defaultLanguage: keyof typeof translations | keyof typeof namespaces = "de";
+export const defaultLanguage:
+	| keyof typeof translations
+	| keyof typeof namespaces = "de";
 
 export const translations = {
 	de: germanTranslations,
