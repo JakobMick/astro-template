@@ -106,7 +106,10 @@ function useSwitchRoute(lang: keyof typeof translations) {
 		}
 
 		if (language !== undefined) {
-			return { route: translations[language].routes[route], language: language };
+			return { 
+				switchedRoute: translations[language].routes[route], 
+				switchedLanguage: language,
+			};
 		}
 
 		const languageKeys = Object.keys(translations) as Array<
