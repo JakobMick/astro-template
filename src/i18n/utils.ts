@@ -1,5 +1,5 @@
 import { defaultLanguage, namespaces, translations } from "@i18n/config";
-import type { DeepestKeys, I18n } from "@i18n/types";
+import type { DeepestKeys, DotNestedKeys, I18n } from "@i18n/types";
 
 function useTranslations(lang: keyof typeof translations) {
 	/**
@@ -9,32 +9,28 @@ function useTranslations(lang: keyof typeof translations) {
 	 * @returns The translated string
 	 */
 	return function t(key: I18n.Translations) {
-		return translations[lang].translations[key];
+		return getValue(translations[lang].translations, key);
 	};
 }
 
-function useNamespaces<
-	Lang extends keyof typeof translations,
-	Namespace extends keyof (typeof namespaces)[keyof typeof translations]
->(lang: Lang, namespace?: Namespace) {
+function useNamespaces(
+	lang: keyof typeof translations,
+	namespace?: I18n.Namespaces
+) {
 	/**
 	 * Get the translated string from the specified key from the specified namespace.
 	 *
 	 * @param key
 	 * @returns The translated string
 	 */
-	return function n<
-		Namespace extends keyof (typeof namespaces)[keyof typeof translations],
-		Key extends DeepestKeys<(typeof namespaces)[typeof lang][Namespace]>
-	>(key: Key, useNamespace?: Namespace) {
+	return function n(
+		key: I18n.NamespaceTranslations,
+		useNamespace?: I18n.Namespaces
+	) {
 		if (useNamespace !== undefined) {
-			const ns = namespaces[lang][useNamespace];
-			const returnValue = ns[key as keyof typeof ns];
-			return returnValue;
+			return getValue(namespaces[lang][useNamespace], key);
 		} else if (namespace !== undefined) {
-			const ns = namespaces[lang][namespace];
-			const returnValue = ns[key as keyof typeof ns];
-			return returnValue;
+			return getValue(namespaces[lang][namespace], key);
 		}
 
 		throw Error("You must specify a namespace to use the n function.");
@@ -49,7 +45,7 @@ function useLinks(lang: keyof typeof translations) {
 	 * @returns The translated link
 	 */
 	return function links(key: I18n.Links) {
-		return translations[lang].links[key];
+		return getValue(translations[lang].links, key);
 	};
 }
 
@@ -61,7 +57,7 @@ function useRoutes(lang: keyof typeof translations) {
 	 * @returns The translated route
 	 */
 	return function routes(key: I18n.Routes) {
-		return translations[lang].routes[key];
+		return getValue(translations[lang].routes, key);
 	};
 }
 
@@ -73,7 +69,7 @@ function useTitles(lang: keyof typeof translations) {
 	 * @returns The translated title
 	 */
 	return function titles(key: I18n.Titles) {
-		return translations[lang].titles[key];
+		return getValue(translations[lang].titles, key);
 	};
 }
 
@@ -85,7 +81,7 @@ function useDescriptions(lang: keyof typeof translations) {
 	 * @returns The translated description
 	 */
 	return function descriptions(key: I18n.Descriptions) {
-		return translations[lang].descriptions[key];
+		return getValue(translations[lang].descriptions, key);
 	};
 }
 
@@ -106,8 +102,8 @@ function useSwitchRoute(lang: keyof typeof translations) {
 		}
 
 		if (language !== undefined) {
-			return { 
-				switchedRoute: translations[language].routes[route], 
+			return {
+				switchedRoute: getValue(translations[language].routes, route),
 				switchedLanguage: language,
 			};
 		}
@@ -120,10 +116,33 @@ function useSwitchRoute(lang: keyof typeof translations) {
 			languageKeys[nextIndex >= languageKeys.length ? 0 : nextIndex];
 
 		return {
-			switchedRoute: translations[nextLanguage].routes[route],
+			switchedRoute: getValue(translations[nextLanguage].routes, route),
 			switchedLanguage: nextLanguage,
 		};
 	};
+}
+
+/**
+ * Get the value from an object with a key. Checks for nested objects and dot notation keys.
+ *
+ * @param object
+ * @param key
+ * @returns The value
+ */
+function getValue(object: object, key: string): string {
+	const value = object[key as keyof typeof object];
+
+	if (value) return value;
+
+	const valueFromNestedObject = key
+		.split(".")
+		.reduce(
+			(accumulator: object, currentValue: string) =>
+				accumulator[currentValue as keyof typeof accumulator],
+			object
+		);
+
+	return valueFromNestedObject as unknown as string;
 }
 
 /**
