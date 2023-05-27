@@ -38,7 +38,7 @@ export type DotNestedKeys<T> = (
 ) extends infer D
 	? Extract<D, string>
 	: never;
-	
+
 export type DeepestKeys<T> = T extends string
 	? never
 	: {

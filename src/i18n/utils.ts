@@ -1,5 +1,5 @@
 import { defaultLanguage, namespaces, translations } from "@i18n/config";
-import type { DeepestKeys, DotNestedKeys, I18n } from "@i18n/types";
+import type { I18n } from "@i18n/types";
 
 function useTranslations(lang: keyof typeof translations) {
 	/**
