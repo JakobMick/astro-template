@@ -5,18 +5,16 @@ import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-	site: process.env.npm_package_config_url,
-	build: {
-		assets: "assets",
-	},
-	integrations: [
-		tailwind({
-			config: {
-				path: "./config/tailwind.config.ts",
-				applyBaseStyles: false,
-			},
-		}),
-		image(),
-		sitemap(),
-	],
+  site: process.env.npm_package_config_url,
+  build: {
+    assets: "assets",
+  },
+  integrations: [
+    tailwind({
+      configFile: "./config/tailwind.config.ts",
+      applyBaseStyles: false,
+    }),
+    image(),
+    sitemap(),
+  ],
 });

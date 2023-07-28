@@ -5,9 +5,9 @@ import titles from "./titles";
 import translations from "./translations";
 
 export default {
-	descriptions,
-	links,
-	routes,
-	titles,
-	translations,
+  descriptions,
+  links,
+  routes,
+  titles,
+  translations,
 } as const;

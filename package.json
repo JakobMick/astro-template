@@ -1,33 +1,34 @@
 {
-	"name": "@jakobmick/astro-template",
-	"config": {
-		"url": "https://www.replace-this.example"
-	},
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"dev": "astro dev --config config/astro.config.ts",
-		"start": "astro dev --config config/astro.config.ts",
-		"build": "astro build --config config/astro.config.ts",
-		"preview": "astro preview --config config/astro.config.ts",
-		"build-preview": "astro build --config config/astro.config.ts && astro preview --config config/astro.config.ts",
-		"astro": "astro --config config/astro.config.ts",
-		"format": "prettier --write --plugin-search-dir=. .",
-		"unligthhouse": "pnpm run unligthhouse-windows",
-		"unligthhouse-windows": "npx unlighthouse --site %npm_package_config_url%",
-		"unligthhouse-linux": "npx unlighthouse --site ${npm_package_version}"
-	},
-	"prettier": "./config/prettier.config.ts",
-	"devDependencies": {
-		"@astrojs/image": "^0.17.2",
-		"@astrojs/sitemap": "^2.0.1",
-		"@astrojs/tailwind": "^4.0.0",
-		"@trivago/prettier-plugin-sort-imports": "^4.2.0",
-		"astro": "^2.9.6",
-		"prettier": "3.0.0",
-		"prettier-plugin-astro": "^0.11.0",
-		"prettier-plugin-tailwindcss": "^0.4.1",
-		"sass": "^1.64.1",
-		"tailwindcss": "^3.3.3"
-	}
+  "name": "@jakobmick/astro-template",
+  "config": {
+    "url": "https://www.replace-this.example"
+  },
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --config config/astro.config.ts",
+    "start": "astro dev --config config/astro.config.ts",
+    "build": "astro build --config config/astro.config.ts",
+    "preview": "astro preview --config config/astro.config.ts",
+    "build-preview": "astro build --config config/astro.config.ts && astro preview --config config/astro.config.ts",
+    "astro": "astro --config config/astro.config.ts",
+    "format": "prettier --write .",
+    "unligthhouse": "pnpm run unligthhouse-windows",
+    "unligthhouse-windows": "npx unlighthouse --site %npm_package_config_url%",
+    "unligthhouse-linux": "npx unlighthouse --site ${npm_package_version}"
+  },
+  "prettier": "./config/prettier.config.ts",
+  "devDependencies": {
+    "@astrojs/image": "^0.17.2",
+    "@astrojs/sitemap": "^2.0.1",
+    "@astrojs/tailwind": "^4.0.0",
+    "@trivago/prettier-plugin-sort-imports": "^4.2.0",
+    "astro": "^2.9.6",
+    "prettier": "3.0.0",
+    "prettier-plugin-astro": "^0.11.0",
+    "prettier-plugin-tailwindcss": "^0.4.1",
+    "sass": "^1.64.1",
+    "tailwindcss": "^3.3.3"
+  }
 }
