@@ -10,7 +10,6 @@ module.export = {
     "prettier-plugin-tailwindcss",
   ],
   tailwindConfig: "./config/tailwind.config.ts",
-  pluginSearchDirs: false,
   importOrder: [
     "^@modules/(.*)$",
     "^@i18n/(.*)$",
