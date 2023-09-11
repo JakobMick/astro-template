@@ -14,9 +14,9 @@
     "build-preview": "astro build --config config/astro.config.ts && astro preview --config config/astro.config.ts",
     "astro": "astro --config config/astro.config.ts",
     "format": "prettier --write .",
-    "unligthhouse": "pnpm run unligthhouse-windows",
-    "unligthhouse-windows": "npx unlighthouse --site %npm_package_config_url%",
-    "unligthhouse-linux": "npx unlighthouse --site ${npm_package_version}"
+    "unlighthouse": "pnpm run unlighthouse-windows",
+    "unlighthouse-windows": "npx unlighthouse --site %npm_package_config_url%",
+    "unlighthouse-linux": "npx unlighthouse --site ${npm_package_config_url}"
   },
   "prettier": "./config/prettier.config.ts",
   "devDependencies": {
