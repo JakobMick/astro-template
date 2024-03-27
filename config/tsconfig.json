@@ -3,7 +3,7 @@
   "include": ["../src/**/*"],
   "exclude": ["../dist", "../node_modules"],
   "compilerOptions": {
-    "types": ["@astrojs/image/client"],
+    "types": ["astro/client"],
     // Enable top-level await and other modern ESM features.
     "target": "ESNext",
     "module": "ESNext",
