@@ -11,6 +11,7 @@ pnpm create astro -- --template JakobMick/astro-template
 2. Update config in [package.json](./package.json):
 
 ```json
+"name": "Project Name",
 "config": {
   "url": "https://www.replace-this.example"
 },
