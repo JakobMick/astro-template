@@ -20,14 +20,14 @@
   },
   "prettier": "./config/prettier.config.ts",
   "devDependencies": {
-    "@astrojs/sitemap": "^3.1.2",
-    "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/sitemap": "^3.2.0",
+    "@astrojs/tailwind": "^5.1.2",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
-    "astro": "^4.5.10",
-    "prettier": "3.2.5",
-    "prettier-plugin-astro": "^0.13.0",
-    "prettier-plugin-tailwindcss": "^0.5.12",
-    "sass": "^1.72.0",
-    "tailwindcss": "^3.4.2"
+    "astro": "^4.16.1",
+    "prettier": "3.3.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-tailwindcss": "^0.6.8",
+    "sass": "^1.79.5",
+    "tailwindcss": "^3.4.13"
   }
 }
