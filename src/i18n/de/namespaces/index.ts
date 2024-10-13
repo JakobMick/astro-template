@@ -1,5 +1,5 @@
 import namespace from "./namespace";
 
 export default {
-  namespace,
+	namespace,
 } as const;

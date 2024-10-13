@@ -21,19 +21,19 @@ pnpm create astro -- --template JakobMick/astro-template
 
 ### Tooling
 
-- [PNPM](https://pnpm.io/)
-- [Prettier](https://prettier.io/)
-  - [prettier-plugin-astro](https://github.com/withastro/prettier-plugin-astro)
-  - [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)
-  - [prettier-plugin-sort-imports](https://github.com/trivago/prettier-plugin-sort-imports)
-- [Unlighthouse](https://unlighthouse.dev/)
+-   [PNPM](https://pnpm.io/)
+-   [Prettier](https://prettier.io/)
+    -   [prettier-plugin-astro](https://github.com/withastro/prettier-plugin-astro)
+    -   [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)
+    -   [prettier-plugin-sort-imports](https://github.com/trivago/prettier-plugin-sort-imports)
+-   [Unlighthouse](https://unlighthouse.dev/)
 
 ### Packages
 
-- [TypeScript](https://www.typescriptlang.org/)
-- [TailwindCss](https://tailwindcss.com/)
-- [Fontsource](https://fontsource.org/)
+-   [TypeScript](https://www.typescriptlang.org/)
+-   [TailwindCss](https://tailwindcss.com/)
+-   [Fontsource](https://fontsource.org/)
 
 ### Features
 
-- [Config Folder](./config/)
+-   [Config Folder](./config/)

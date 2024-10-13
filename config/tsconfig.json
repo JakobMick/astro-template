@@ -1,32 +1,32 @@
 {
-  "extends": "astro/tsconfigs/strict",
-  "include": ["../src/**/*"],
-  "exclude": ["../dist", "../node_modules"],
-  "compilerOptions": {
-    "types": ["astro/client"],
-    // Enable top-level await and other modern ESM features.
-    "target": "ESNext",
-    "module": "ESNext",
-    // Enable node-style module resolution, for things like npm package imports.
-    "moduleResolution": "node",
-    // Enable JSON imports.
-    "resolveJsonModule": true,
-    // Enable stricter transpilation for better output.
-    "isolatedModules": true,
-    // Astro will directly run your TypeScript code, no transpilation needed.
-    "noEmit": true,
-    // Add import aliases
-    "baseUrl": "../.",
-    "paths": {
-      "@modules/*": ["node_modules/*"],
-      "@a11y/*": ["src/a11y/*"],
-      "@assets/*": ["src/assets/*"],
-      "@components/*": ["src/components/*"],
-      "@i18n/*": ["src/i18n/*"],
-      "@layouts/*": ["src/layouts/*"],
-      "@pages/*": ["src/pages/*"],
-      "@scripts/*": ["src/scripts/*"],
-      "@styles/*": ["src/styles/*"]
-    }
-  }
+	"extends": "astro/tsconfigs/strict",
+	"include": ["../src/**/*"],
+	"exclude": ["../dist", "../node_modules"],
+	"compilerOptions": {
+		"types": ["astro/client"],
+		// Enable top-level await and other modern ESM features.
+		"target": "ESNext",
+		"module": "ESNext",
+		// Enable node-style module resolution, for things like npm package imports.
+		"moduleResolution": "node",
+		// Enable JSON imports.
+		"resolveJsonModule": true,
+		// Enable stricter transpilation for better output.
+		"isolatedModules": true,
+		// Astro will directly run your TypeScript code, no transpilation needed.
+		"noEmit": true,
+		// Add import aliases
+		"baseUrl": "../.",
+		"paths": {
+			"@modules/*": ["node_modules/*"],
+			"@a11y/*": ["src/a11y/*"],
+			"@assets/*": ["src/assets/*"],
+			"@components/*": ["src/components/*"],
+			"@i18n/*": ["src/i18n/*"],
+			"@layouts/*": ["src/layouts/*"],
+			"@pages/*": ["src/pages/*"],
+			"@scripts/*": ["src/scripts/*"],
+			"@styles/*": ["src/styles/*"]
+		}
+	}
 }
